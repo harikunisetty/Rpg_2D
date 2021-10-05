@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb2d;
+    
     [SerializeField] GameObject player;
     [SerializeField] float lifeTime=2f;
     public float speed;
-    void Start()
+    [SerializeField] Rigidbody2D rb2d;
+    private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+    }
+    void Start()
+    {
+       
         player = GameObject.FindGameObjectWithTag("Player");
     }
 

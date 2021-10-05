@@ -52,4 +52,8 @@ public class EnemyMovement : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Offset);
         Gizmos.DrawWireSphere(transform.position, ShootRange);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+      GameControl.health -= 1;
+    }
 }

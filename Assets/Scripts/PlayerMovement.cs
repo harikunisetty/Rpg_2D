@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         {
             FilpCharacter();
         }
+        
     }
     public void FilpCharacter()
     {
@@ -55,6 +56,9 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("SplPower"))
         {
             Destroy(collision.gameObject);
+               
         }
+        if (Input.GetKeyDown(KeyCode.X))
+            anim.SetTrigger("SplAttack");
     }
 }
