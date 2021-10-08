@@ -20,10 +20,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float fireRate;
     [SerializeField] float nextAtacckTime;
 
+    [SerializeField] EnemyHealth enemyHealth;
+    [SerializeField] float Hitvalue = 10f;
+
 
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        enemyHealth = GetComponent<EnemyHealth>();
     }
     private void Update()
     {
@@ -52,8 +56,16 @@ public class EnemyMovement : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Offset);
         Gizmos.DrawWireSphere(transform.position, ShootRange);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-      GameControl.health -= 1;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            GameControl.health -= 1;
+        }
+            
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            enemyHealth.AiDamage(10f);
+        }
     }
 }

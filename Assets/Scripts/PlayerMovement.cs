@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         rigidbody2D.velocity = new Vector2(xInput, yInput);
 
         anim.SetFloat("Speed", rigidbody2D.velocity.x);
-        anim.SetFloat("Direction",rigidbody2D.velocity.y);
+        anim.SetFloat("Direction", rigidbody2D.velocity.y);
 
 
         if (xInput > 0 && !facingRight)
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         {
             FilpCharacter();
         }
-        
+
     }
     public void FilpCharacter()
     {
@@ -56,9 +56,10 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("SplPower"))
         {
             Destroy(collision.gameObject);
-               
+
         }
         if (Input.GetKeyDown(KeyCode.X))
             anim.SetTrigger("SplAttack");
     }
+
 }

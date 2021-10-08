@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 4443927559853096978, guid: 9107994c1f61ef948ba62827c52fde4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  itemButton: {fileID: 6252348863873542237, guid: 3d08884dc455c654a856d486e4b8bbed, type: 3}
+  itemButton: {fileID: 1938659022903780153, guid: a337c7df2c3f92a4f9686f29d848e9c9, type: 3}
 --- !u!58 &643063107
 CircleCollider2D:
   m_ObjectHideFlags: 0
