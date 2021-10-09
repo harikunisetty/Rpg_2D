@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class PicupItem : MonoBehaviour
 {
     [SerializeField] InventoryItem ItemData;
     [SerializeField] GameObject pickEffect;
+
     
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -26,4 +30,5 @@ public class PicupItem : MonoBehaviour
         }
     }
 
+    
 }

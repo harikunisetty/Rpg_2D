@@ -33,7 +33,7 @@ public class AmmoPostion : MonoBehaviour
     {
 
         Transform ammospawn = AmmoManager.SpawnAmmo(fireTrans.position, Quaternion.identity);
-        ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.right * speed, ForceMode2D.Impulse);
+        ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.right * speed,ForceMode2D.Impulse);
 
     }
 }

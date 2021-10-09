@@ -23,6 +23,9 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] EnemyHealth enemyHealth;
     [SerializeField] float Hitvalue = 10f;
 
+    [SerializeField] GameObject pickEffect;
+
+
 
     private void Start()
     {
@@ -65,6 +68,7 @@ public class EnemyMovement : MonoBehaviour
             
         if (other.gameObject.CompareTag("Bullet"))
         {
+            Instantiate(pickEffect, transform.position, Quaternion.identity);
             enemyHealth.AiDamage(10f);
         }
     }

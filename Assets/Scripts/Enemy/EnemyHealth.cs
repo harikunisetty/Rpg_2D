@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] float AIHealth;
     private float maximumAiHealth = 100f;
+    [SerializeField] GameObject pickEffect;
     void Start()
     {
         AIHealth = maximumAiHealth;
@@ -26,11 +27,13 @@ public class EnemyHealth : MonoBehaviour
         else
         {
             EnemyDead();
+            Instantiate(pickEffect, transform.position, Quaternion.identity);
         }
     }
 
     public void EnemyDead()
     {
+        
         Destroy(gameObject);
     }
 }
