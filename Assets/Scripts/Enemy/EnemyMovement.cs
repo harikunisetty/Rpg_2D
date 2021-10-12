@@ -24,35 +24,32 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float Hitvalue = 10f;
 
     [SerializeField] GameObject pickEffect;
-
-
-
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyHealth = GetComponent<EnemyHealth>();
+      
     }
     private void Update()
     {
-        distanceFormPlayer = Vector2.Distance(Player.position, transform.position);
-        if (distanceFormPlayer < Offset)
-        {
-            if (distanceFormPlayer > ShootRange)
+            distanceFormPlayer = Vector2.Distance(Player.position, transform.position);
+            if (distanceFormPlayer < Offset)
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, Player.position, xSpeed);
-            }
-            else if (distanceFormPlayer <= ShootRange)
-            {
-                if(nextAtacckTime<Time.deltaTime)
+                if (distanceFormPlayer > ShootRange)
                 {
-                    Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
-                    nextAtacckTime=Time.deltaTime+fireRate;
+                    transform.position = Vector2.MoveTowards(this.transform.position, Player.position, xSpeed);
                 }
-                
-            }
-        }
-    }
+                else if (distanceFormPlayer <= ShootRange)
+                {
+                    if (nextAtacckTime < Time.deltaTime)
+                    {
+                        Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+                        nextAtacckTime = Time.deltaTime + fireRate;
+                    }
 
+                }
+            }       
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
@@ -64,6 +61,7 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             GameControl.health -= 1;
+            enemyHealth.AiDamage(10f);
         }
             
         if (other.gameObject.CompareTag("Bullet"))

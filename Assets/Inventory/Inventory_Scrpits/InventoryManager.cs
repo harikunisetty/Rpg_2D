@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<int> itemtNumbers = new List<int>();
     public GameObject[] Slots;
-    /* public Dictionary<PicupItem, int> itemDict = new Dictionary<PicupItem, int>();*/
+   
 
     public InventoryItem addItem_01;
     public InventoryItem RemoveItem_01;
@@ -47,17 +47,6 @@ public class InventoryManager : MonoBehaviour
     }
     private void DisplayItems()
     {
-        /*for (int i = 0; i < items.Count; i++)
-        {
-            Slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            Slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemSprite;
-
-            Slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
-            Slots[i].transform.GetChild(1).GetComponent<Text>().text = itemtNumbers[i].ToString();
-
-            Slots[i].transform.GetChild(2).gameObject.SetActive(true);
-        }
-*/
         for(int i = 0; i < Slots.Length; i++)
         {
             if (i < items.Count)
