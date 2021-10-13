@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MainMenu : Menu<MainMenu>
 {
-   /* public void PlayButton()
+    public void PlayButton()
     {
         if (GameManager.Instance != null)
         {
             GameManager.Instance.LoadNextLevel();
         }
-    }*/
+    }
 
     public void SettingButton()
     {

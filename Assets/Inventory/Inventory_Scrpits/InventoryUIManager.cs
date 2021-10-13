@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class InventoryUIManager : MonoBehaviour
 {
-    [SerializeField] GameObject inventoryMenu; 
+    [SerializeField] GameObject inventoryMenu;
+    [SerializeField]
+    GameObject inventoryBox;
+    [SerializeField] static bool GameIsPaused;
 
     void Start()
     {
@@ -19,22 +22,25 @@ public class InventoryUIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (InventoryManager.Instance.isPaused)
+            if (GameIsPaused)
             {
                 Resume();
             }
             else
                 Pause();
         }
+
     }
-    private void Resume()
+    public void Resume()
     {
         inventoryMenu.gameObject.SetActive(false);
+        inventoryBox.gameObject.SetActive(true);
         Time.timeScale = 0.2f;
     }
-    private void Pause()
+   public void Pause()
     {
         inventoryMenu.gameObject.SetActive(true);
+        inventoryBox.gameObject.SetActive(false);
         Time.timeScale =0.0f;
     }
 }

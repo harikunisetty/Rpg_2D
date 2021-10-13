@@ -39,7 +39,6 @@ public class GameControl : MonoBehaviour
                 hearth3.gameObject.SetActive(false);
 
                 break;
-                break;
             case 1:
                 hearth1.gameObject.SetActive(true);
                 hearth2.gameObject.SetActive(false);
