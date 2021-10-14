@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpwan : MonoBehaviour
 {
-    [SerializeField] GameObject enemy;
+   /* [SerializeField] GameObject enemy;
     [SerializeField] GameObject newEnemy;
     [SerializeField] SpriteRenderer rend;
     private int rendomSpawnZone;
@@ -41,5 +41,5 @@ public class EnemySpwan : MonoBehaviour
         newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity);
         rend = newEnemy.GetComponent<SpriteRenderer>();
         rend.color = new Color(Random.Range(0, 2), Random.Range(0, 2), 1f);
-    }
+    }*/
 }
