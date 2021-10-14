@@ -4,28 +4,42 @@ using UnityEngine;
 
 public class EnemySpwan : MonoBehaviour
 {
-    [Header("SpwanEnemy")]
-    [SerializeField] Transform[] spwanPoints;
-    [SerializeField] GameObject[] spwanEnemy;
-    public float timerCount;
-    public float enemyStartTime;
-    public float restTime;
+    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject newEnemy;
+    [SerializeField] SpriteRenderer rend;
+    private int rendomSpawnZone;
+    private float xInput, yInput;
+    private Vector3 spawnPosition;
 
-    void Start()
+    private void Start()
     {
-        timerCount = enemyStartTime;
+        InvokeRepeating("SpawnNewEnemy", 0f, 2f);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void SpawnNewEnemy()
     {
-        timerCount = -Time.deltaTime;
-        if (timerCount <= 0)
+        rendomSpawnZone = Random.Range(0, 4);
+        switch (rendomSpawnZone)
         {
-            timerCount = restTime;
-            int randomitems = Random.Range(0, spwanEnemy.Length);
-            int spwanposition = Random.Range(0, spwanPoints.Length);
-            Instantiate(spwanEnemy[randomitems], spwanPoints[spwanposition].position, transform.rotation);
+            case 0:
+                xInput = Random.Range(-11f, -10f);
+                yInput= Random.Range(-8f, -8f);
+                break;
+            case 1:
+                xInput = Random.Range(-10f, 10f);
+                yInput = Random.Range(-7f, -8f);
+                break;
+            case 2:
+                xInput = Random.Range(10f, 11f);
+                yInput = Random.Range(-8f, 8f);
+                break;
+            case 3:
+                xInput = Random.Range(-10f, 10f);
+                yInput = Random.Range(7f, 8f);
+                break;
         }
+        spawnPosition = new Vector3(xInput, yInput, 0f);
+        newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity);
+        rend = newEnemy.GetComponent<SpriteRenderer>();
+        rend.color = new Color(Random.Range(0, 2), Random.Range(0, 2), 1f);
     }
 }

@@ -9,6 +9,7 @@ public class SpawnItems : MonoBehaviour
     public float timer;
     public float startTime; 
     public float restTimer;
+
     void Start()
     {
         timer = startTime;
@@ -23,5 +24,6 @@ public class SpawnItems : MonoBehaviour
             int spwanposition = Random.Range(0, spwanPoints.Length);
             Instantiate(spwanItems[randomitems], spwanPoints[spwanposition].position, transform.rotation);
         }
+        
     }
 }

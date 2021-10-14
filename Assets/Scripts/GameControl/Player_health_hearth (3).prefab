@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9054734751568660604}
   - component: {fileID: 9054734751568660605}
   - component: {fileID: 9054734751568660602}
+  - component: {fileID: 573650807}
   m_Layer: 0
   m_Name: Player_health_hearth (3)
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9054734751568660603}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.52, y: 0.16, z: 6.3999996}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
@@ -122,3 +123,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c947eba1587b8184ba36f121d3fa8529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &573650807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054734751568660603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3016882eecdf741a640f75324a2572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemData: {fileID: 11400000, guid: 9f6be25dade1be141aa15cac9d2a293a, type: 2}
+  pickEffect: {fileID: 9132001703022390679, guid: 9399576a1afe9754788d201e898177ca, type: 3}
+  lifetime: 10

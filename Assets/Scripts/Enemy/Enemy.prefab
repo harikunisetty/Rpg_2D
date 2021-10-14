@@ -294,7 +294,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6571218915939258770}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.67, y: 2.95, z: -0.349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 0.1
-  Offset: 2.29
+  Offset: 1.8
   distanceFormPlayer: 20
   Player: {fileID: 0}
   bullet: {fileID: 7194057794992928609, guid: fa7e0d18b06bd42418c71b583874a7f5, type: 3}
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8ebcf178268e44f8263ef92d09ba7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIHealth: 0
+  AIHealth: 100
   pickEffect: {fileID: 9132001703022390679, guid: 9399576a1afe9754788d201e898177ca, type: 3}
 --- !u!1 &6571218916505695556
 GameObject:

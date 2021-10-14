@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5534130096125470063}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.672, y: -0.105, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
@@ -124,3 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemData: {fileID: 11400000, guid: f642d60d1cc17d149a4691f7f4831f34, type: 2}
   pickEffect: {fileID: 9132001703022390679, guid: 9399576a1afe9754788d201e898177ca, type: 3}
+  lifetime: 10

@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float maxVelocity = 5f;
     private float xInput, yInput;
     [SerializeField] bool facingRight;
+    Vector2 moveMent;
 
     [Header("Components")]
     [SerializeField] Rigidbody2D rigidbody2D;
@@ -35,20 +36,20 @@ public class PlayerMovement : MonoBehaviour
         canSplAttack01 = false;
         canFireSplAttack01 = true;
         attackType = AttackType.Normal;
+        
 
         rigidbody2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
     void Update()
     {
-        xInput = Input.GetAxis("Horizontal") * speed;
-        yInput = Input.GetAxis("Vertical") * speed;
+        xInput = Input.GetAxis("Horizontal") *speed;
+        yInput= Input.GetAxis("Vertical") *speed;
 
         rigidbody2D.velocity = new Vector2(xInput, yInput);
 
-        anim.SetFloat("Speed", rigidbody2D.velocity.x);
-        anim.SetFloat("Direction", rigidbody2D.velocity.y);
-
+        anim.SetFloat("Horizontal",rigidbody2D.velocity.x);
+        anim.SetFloat("Vertical",rigidbody2D.velocity.y);
 
         if (xInput > 0 && !facingRight)
         {

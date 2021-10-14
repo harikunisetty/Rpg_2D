@@ -35,12 +35,12 @@ public class InventoryUIManager : MonoBehaviour
     {
         inventoryMenu.gameObject.SetActive(false);
         inventoryBox.gameObject.SetActive(true);
-        Time.timeScale = 0.2f;
+        /*Time.timeScale = 0.2f;*/
     }
    public void Pause()
     {
         inventoryMenu.gameObject.SetActive(true);
         inventoryBox.gameObject.SetActive(false);
-        Time.timeScale =0.0f;
+       /* Time.timeScale =0.0f;*/
     }
 }

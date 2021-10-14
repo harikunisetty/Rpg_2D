@@ -9,8 +9,17 @@ public class PicupItem : MonoBehaviour
 {
     [SerializeField] InventoryItem ItemData;
     [SerializeField] GameObject pickEffect;
+    [SerializeField] float lifetime = 10f;
 
-    
+    private void OnEnable()
+    {
+        Invoke("Die", lifetime);
+    }
+    void Die()
+    {
+        CancelInvoke();
+        gameObject.SetActive(false);
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
