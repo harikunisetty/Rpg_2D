@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] float AIHealth;
     private float maximumAiHealth = 100f;
     [SerializeField] GameObject pickEffect;
+
+    [SerializeField] UIManager aiUIManager;
     void Start()
     {
         AIHealth = maximumAiHealth;
@@ -19,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
         if (AIHealth > 0f)
         {
             AIHealth -= hitvalue;
-            UIManager.Instance.AiHealthUI(AIHealth);
+            aiUIManager.AiHealthUI(AIHealth);
 
             if (AIHealth <= 0f)
                 EnemyDead();
@@ -32,8 +34,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     public void EnemyDead()
-    {
-        
+    {        
         Destroy(gameObject);
     }
 }

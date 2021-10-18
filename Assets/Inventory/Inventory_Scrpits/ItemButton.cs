@@ -10,10 +10,11 @@ public class ItemButton : MonoBehaviour
     {
         for (int i = 0; i < InventoryManager.Instance.items.Count; i++)
         {
-            if (button == 1)
-            {
-                thisItem = InventoryManager.Instance.items[i];
-            }
+            thisItem = InventoryManager.Instance.items[i];
+            //if (button == 1)
+            //{
+            //    thisItem = InventoryManager.Instance.items[i];
+            //}
         }
         return thisItem;
     }

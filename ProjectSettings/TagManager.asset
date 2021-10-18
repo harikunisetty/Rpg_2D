@@ -51,3 +51,6 @@ TagManager:
   - name: Land - Path
     uniqueID: 3070060113
     locked: 0
+  - name: Enemy UI
+    uniqueID: 3417266497
+    locked: 0

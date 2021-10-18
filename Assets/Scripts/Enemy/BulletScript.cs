@@ -14,17 +14,17 @@ public class BulletScript : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
     void Start()
-    {
-       
+    {       
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (player == null)
+            return;
+
         Vector2 moveDirection = (player.transform.position - transform.position).normalized * speed;
         rb2d.velocity = new Vector2(moveDirection.x, moveDirection.y);
-        /*gameObject.SetActive(false);*/
     }
     private void OnEnable()
     {

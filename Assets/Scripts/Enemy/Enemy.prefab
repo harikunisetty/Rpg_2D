@@ -134,8 +134,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -877700799
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &6571218914966083500
 MonoBehaviour:
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 6571218915678382392}
   - component: {fileID: 6571218915678382395}
   m_Layer: 6
-  m_Name: AiHealth (1)
+  m_Name: AiHealth Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6571218915939258770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.67, y: 2.95, z: -0.349}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6571218916505695557}
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 0.1
-  Offset: 1.8
+  Offset: 5
   distanceFormPlayer: 20
   Player: {fileID: 0}
   bullet: {fileID: 7194057794992928609, guid: fa7e0d18b06bd42418c71b583874a7f5, type: 3}
@@ -458,6 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIHealth: 100
   pickEffect: {fileID: 9132001703022390679, guid: 9399576a1afe9754788d201e898177ca, type: 3}
+  aiUIManager: {fileID: 6571218914966083502}
 --- !u!1 &6571218916505695556
 GameObject:
   m_ObjectHideFlags: 0

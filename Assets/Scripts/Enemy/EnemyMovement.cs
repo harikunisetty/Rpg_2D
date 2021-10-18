@@ -27,28 +27,32 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        enemyHealth = GetComponent<EnemyHealth>();
-      
+        enemyHealth = GetComponent<EnemyHealth>();      
     }
+
     private void Update()
     {
-            distanceFormPlayer = Vector2.Distance(Player.position, transform.position);
-            if (distanceFormPlayer < Offset)
-            {
-                if (distanceFormPlayer > ShootRange)
-                {
-                    transform.position = Vector2.MoveTowards(this.transform.position, Player.position, xSpeed);
-                }
-                else if (distanceFormPlayer <= ShootRange)
-                {
-                    if (nextAtacckTime < Time.deltaTime)
-                    {
-                        Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
-                        nextAtacckTime = Time.deltaTime + fireRate;
-                    }
+        if (Player == null)
+            return;
 
+        distanceFormPlayer = Vector2.Distance(Player.position, transform.position);
+
+        if (distanceFormPlayer < Offset)
+        {
+            if (distanceFormPlayer > ShootRange)
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, Player.position, xSpeed);
+            }
+            else if (distanceFormPlayer < ShootRange)
+            {
+                if (nextAtacckTime < Time.deltaTime)
+                {
+                    nextAtacckTime = Time.deltaTime + fireRate;
+                    Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
                 }
-            }       
+
+            }
+        }       
     }
     private void OnDrawGizmos()
     {
@@ -60,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameControl.health -= 1;
+            // GameControl.health -= 1;
             enemyHealth.AiDamage(10f);
         }
             

@@ -19,8 +19,7 @@ public class PlayerAmmo : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
-        {
-            
+        {            
             gameObject.SetActive(false);
 
             Debug.Log("Touch Enemy");
