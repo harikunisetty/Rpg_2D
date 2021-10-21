@@ -22,7 +22,7 @@ public class AmmoPostion : MonoBehaviour
     void Fire()
     {
         Transform ammospawn = AmmoManager.SpawnAmmo(fireTrans.position, Quaternion.identity);
-        ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.right * speed,ForceMode2D.Impulse);
+        ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.forward * speed,ForceMode2D.Impulse);
 
     }
     /*GameObject Go = Instantiate(ammo, fireTrans.position, Quaternion.identity, this.transform);

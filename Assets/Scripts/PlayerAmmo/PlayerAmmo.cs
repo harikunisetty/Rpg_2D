@@ -21,6 +21,7 @@ public class PlayerAmmo : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {            
             gameObject.SetActive(false);
+            GameManager.Instance.UpdateKills();
 
             Debug.Log("Touch Enemy");
         }

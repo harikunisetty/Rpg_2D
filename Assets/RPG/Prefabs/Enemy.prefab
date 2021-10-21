@@ -157,6 +157,7 @@ MonoBehaviour:
   nextAtacckTime: 0
   enemyHealth: {fileID: 0}
   Hitvalue: 10
+  pickEffect: {fileID: 0}
 --- !u!50 &7909049033152685658
 Rigidbody2D:
   serializedVersion: 4
@@ -191,6 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIHealth: 0
+  pickEffect: {fileID: 0}
+  aiUIManager: {fileID: 0}
 --- !u!1 &7909049033727099534
 GameObject:
   m_ObjectHideFlags: 0

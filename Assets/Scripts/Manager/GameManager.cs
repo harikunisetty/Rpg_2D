@@ -12,7 +12,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] LevelChangerObject levelObject;
     [SerializeField] PlayerMovement playerController;
     [SerializeField] GameObject player;
+    [Header("killcount")]
+    private int coins;
+    public int Coins { get => coins; }
 
+    private int Kill;
+    public int Kill1 { get => Kill; }
     private void Awake()
     {
         if (Instance != null)
@@ -71,5 +76,17 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+    public void UpdateCoins()
+    {
+        coins++;
+
+        UiScore.Instance.CoinsCountUI();
+    }
+    public void UpdateKills()
+    {
+        Kill++;
+
+        UiScore.Instance.KillCountUI();
     }
 }

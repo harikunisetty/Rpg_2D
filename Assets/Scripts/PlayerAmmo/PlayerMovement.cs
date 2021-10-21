@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         rigidbody2D.velocity = new Vector2(xInput, yInput);
 
         anim.SetFloat("Horizontal",Mathf.Abs(rigidbody2D.velocity.x));
-        anim.SetFloat("Vertical",rigidbody2D.velocity.y);
+        anim.SetFloat("Vertical", Mathf.Abs(rigidbody2D.velocity.y));
 
         if (xInput > 0 && !facingRight)
         {
@@ -92,6 +92,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+       
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+           GameManager.Instance.UpdateCoins();
+        }
+
         if (other.CompareTag("SPLAttack01"))
         {
             canSplAttack01 = true;
