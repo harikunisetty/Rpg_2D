@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (SceneManager.GetActiveScene().name == "MainUI")
@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
             LoadNextLevel();
         }
     }
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void LoadNextLevel()
     {
       

@@ -26,6 +26,6 @@ public class UiScore : MonoBehaviour
     }
     public void KillCountUI()
     {
-        coinsCountText.text = "00" +GameManager.Instance.Kill1.ToString();
+        killCountText.text = "00" +GameManager.Instance.Kill1.ToString();
     }
 }

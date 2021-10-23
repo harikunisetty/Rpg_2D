@@ -14,7 +14,7 @@ public class MainMenu : Menu<MainMenu>
 
     public void SettingButton()
     {
-        SettingsMenu settings = transform.parent.Find("SettingsMenu(Clone)").GetComponent<SettingsMenu>();
+        SettingsMenu settings = transform.parent.Find("SETTINGSMENU(Clone)").GetComponent<SettingsMenu>();
         if (MenuManager.Instance != null && settings != null)
         {
             Debug.Log("Setting Button Pressed");

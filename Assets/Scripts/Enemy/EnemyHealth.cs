@@ -36,5 +36,6 @@ public class EnemyHealth : MonoBehaviour
     public void EnemyDead()
     {        
         Destroy(gameObject);
+        GameManager.Instance.UpdateKills();
     }
 }

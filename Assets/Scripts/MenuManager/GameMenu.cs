@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class GameMenu : MonoBehaviour
+public class GameMenu :Menu<GameMenu>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Score")]
+    [SerializeField] Text scoreText;
 
-    // Update is called once per frame
-    void Update()
+    public void PauseGamemenu()
     {
-        
+        Time.timeScale = 0f;
+        PauseMenu.Open();
     }
 }

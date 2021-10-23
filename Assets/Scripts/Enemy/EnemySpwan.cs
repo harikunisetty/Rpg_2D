@@ -10,10 +10,13 @@ public class EnemySpwan : MonoBehaviour
     private int rendomSpawnZone;
     private float xInput, yInput;
     private Vector3 spawnPosition;
+    [Header("TimeToStart")]
+    [SerializeField] float timeToStart;
+    [SerializeField] float timeBetweenEnemys;
 
     private void Start()
     {
-        InvokeRepeating("SpawnNewEnemy", 0f, 2f);
+        InvokeRepeating("SpawnNewEnemy", timeToStart, timeBetweenEnemys);
     }
     private void SpawnNewEnemy()
     {

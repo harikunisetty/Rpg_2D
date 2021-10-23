@@ -7,7 +7,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] MainMenu mainMenuPrefabs;
     [SerializeField] SettingsMenu settingsMenu;
     [SerializeField] CreditsMenu creditsMenu;
-    /*[SerializeField] GameMenu gameMenu;*/
+    [SerializeField] GameMenu gameMenuPrefabs;
+    [SerializeField] PauseMenu pauseMenuPrefabs;
     [SerializeField] Transform menuParentObj;
 
     [Header("Stack")]
@@ -49,7 +50,7 @@ public class MenuManager : MonoBehaviour
         GameObject menuObj = new GameObject("Menu");
         menuParentObj = menuObj.transform;
 
-        Menu[] menus = { mainMenuPrefabs, settingsMenu, creditsMenu};
+        Menu[] menus = { mainMenuPrefabs, settingsMenu, creditsMenu,gameMenuPrefabs,pauseMenuPrefabs};
         foreach (Menu menuPrefabs in menus)
         {
             if (menuPrefabs != null)
