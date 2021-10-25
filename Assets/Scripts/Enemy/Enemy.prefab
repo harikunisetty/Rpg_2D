@@ -412,12 +412,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 0.1
-  Offset: 5
-  distanceFormPlayer: 20
+  Offset: 9.53
+  distanceFormPlayer: 26.9
   Player: {fileID: 0}
   bullet: {fileID: 7194057794992928609, guid: fa7e0d18b06bd42418c71b583874a7f5, type: 3}
   bulletParent: {fileID: 6571218916505695556}
-  ShootRange: 0.98
+  ShootRange: 6.6
   fireRate: 0.001
   nextAtacckTime: 0
   enemyHealth: {fileID: 6571218915939258771}

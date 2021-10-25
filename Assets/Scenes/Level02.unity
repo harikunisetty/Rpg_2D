@@ -1336,7 +1336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2192231127414620036, guid: 53e9136a5f2633a438688c30d59282ae, type: 3}
       propertyPath: m_Name
-      value: InventoryManager 1
+      value: InventoryManager
       objectReference: {fileID: 0}
     - target: {fileID: 2192231127414620042, guid: 53e9136a5f2633a438688c30d59282ae, type: 3}
       propertyPath: m_RootOrder

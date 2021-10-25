@@ -6,7 +6,7 @@ public class AmmoManager : MonoBehaviour
 {
 
     [Header("Pools")]
-    [SerializeField] int numOfPools = 10;
+    [SerializeField] int numOfPools = 100;
     [SerializeField] GameObject ammoPrefab;
     [SerializeField] GameObject[] ammoArray;
 

@@ -47,7 +47,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 if (nextAtacckTime < Time.deltaTime)
                 {
-                    nextAtacckTime = Time.deltaTime + fireRate;
+                    nextAtacckTime += Time.deltaTime + fireRate;
                     Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
                 }
 
@@ -71,7 +71,7 @@ public class EnemyMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             Instantiate(pickEffect, transform.position, Quaternion.identity);
-            enemyHealth.AiDamage(10f);
+            enemyHealth.AiDamage(60f);
         }
     }
 }

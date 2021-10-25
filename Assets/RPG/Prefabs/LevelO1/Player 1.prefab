@@ -275,6 +275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackIntervals: 0.5
-  speed: 20
+  speed: 500
   fireTrans: {fileID: 6592823089887044440}
   Ammo: {fileID: 8734042746582792709, guid: 489fdb5fea1296b4ea566ab55ed1d453, type: 3}

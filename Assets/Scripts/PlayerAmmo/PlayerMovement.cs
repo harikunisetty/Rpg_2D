@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         rigidbody2D.velocity = new Vector2(xInput, yInput);
 
         anim.SetFloat("Horizontal",Mathf.Abs(rigidbody2D.velocity.x));
-        anim.SetFloat("Vertical", Mathf.Abs(rigidbody2D.velocity.y));
+        anim.SetFloat("Vertical",yInput);
 
         if (xInput > 0 && !facingRight)
         {

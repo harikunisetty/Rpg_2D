@@ -6,7 +6,7 @@ public class BulletScript : MonoBehaviour
 {
     
     [SerializeField] GameObject player;
-    [SerializeField] float lifeTime=2f;
+    [SerializeField] float lifeTime=4f;
     public float speed;
     [SerializeField] Rigidbody2D rb2d;
     private void Awake()
@@ -35,5 +35,13 @@ public class BulletScript : MonoBehaviour
     {
         CancelInvoke();
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+           GameControl.health -= 1;
+        }
     }
 }
