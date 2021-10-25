@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - SPLAttack01
   - Coin
+  - BackPack
+  - Key
   layers:
   - Default
   - TransparentFX

@@ -21,11 +21,27 @@ public class AmmoPostion : MonoBehaviour
     }
     void Fire()
     {
-        Transform ammospawn = AmmoManager.SpawnAmmo(fireTrans.position, Quaternion.identity);
-        ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.forward * speed,ForceMode2D.Impulse);
+        for(int i=0; i<=2; i++)
+        {
+            Transform ammospawn = AmmoManager.SpawnAmmo(fireTrans.position, Quaternion.identity);
+            /*ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.forward * speed, ForceMode2D.Impulse);*/
+
+            switch (i)
+            {
+                case 0:
+                    ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.right * speed + new Vector3(0f, -90f, 0f));
+                    break;
+                case 1:
+                    ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.right * speed + new Vector3(0f, 0f, 0f));
+                    break;
+
+                case 2:
+                    ammospawn.GetComponent<Rigidbody2D>().AddForce(fireTrans.right * speed + new Vector3(0f, 90, 0f));
+                    break;
+            }
+        }
+       
 
     }
-    /*GameObject Go = Instantiate(ammo, fireTrans.position, Quaternion.identity, this.transform);
-    Go.GetComponent<Rigidbody2D>().AddForce(this.transform.InverseTransformVector(Vector3.right)* 15f, ForceMode2D.Impulse);
-    Debug.Log("Fire");*/
+   
 }

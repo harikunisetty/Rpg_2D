@@ -6,7 +6,7 @@ public class LevelChangerObject : MonoBehaviour
 {
     [SerializeField] bool isObjectiveCompleted;
 
-    public bool IsObjectiveCompleted 
+    public bool IsObjectiveCompleted
     {
         get { return isObjectiveCompleted; }
     }
