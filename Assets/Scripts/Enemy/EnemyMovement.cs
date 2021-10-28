@@ -21,13 +21,16 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float nextAtacckTime;
 
     [SerializeField] EnemyHealth enemyHealth;
-    [SerializeField] float Hitvalue = 10f;
+    /*[SerializeField] float Hitvalue = 10f;*/
 
     [SerializeField] GameObject pickEffect;
+    [SerializeField] float restTime;
+
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        enemyHealth = GetComponent<EnemyHealth>();      
+        enemyHealth = GetComponent<EnemyHealth>();
+        nextAtacckTime = fireRate;
     }
 
     private void Update()
@@ -43,11 +46,12 @@ public class EnemyMovement : MonoBehaviour
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, Player.position, xSpeed);
             }
-            else if (distanceFormPlayer < ShootRange)
+            else if (distanceFormPlayer <=ShootRange)
             {
-                if (nextAtacckTime < Time.deltaTime)
+                nextAtacckTime -= Time.deltaTime;
+                if (nextAtacckTime <= 0)
                 {
-                    nextAtacckTime += Time.deltaTime + fireRate;
+                    nextAtacckTime = restTime;
                     Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
                 }
 

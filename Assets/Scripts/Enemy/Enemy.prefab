@@ -418,11 +418,12 @@ MonoBehaviour:
   bullet: {fileID: 7194057794992928609, guid: fa7e0d18b06bd42418c71b583874a7f5, type: 3}
   bulletParent: {fileID: 6571218916505695556}
   ShootRange: 6.6
-  fireRate: 0.001
+  fireRate: 2
   nextAtacckTime: 0
   enemyHealth: {fileID: 6571218915939258771}
   Hitvalue: 10
   pickEffect: {fileID: 9132001703022390679, guid: 9399576a1afe9754788d201e898177ca, type: 3}
+  restTime: 2
 --- !u!50 &6571218915939258768
 Rigidbody2D:
   serializedVersion: 4

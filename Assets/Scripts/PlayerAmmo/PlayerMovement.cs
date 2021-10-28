@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed = 40f;
-    [SerializeField] float maxVelocity = 5f;
+  /*  [SerializeField] float maxVelocity = 5f;*/
     private float xInput, yInput;
     [SerializeField] bool facingRight;
     Vector2 moveMent;
 
     [Header("Components")]
-    [SerializeField] Rigidbody2D rigidbody2D;
+    [SerializeField] new Rigidbody2D rigidbody2D;
     [SerializeField] Animator anim;
 
 

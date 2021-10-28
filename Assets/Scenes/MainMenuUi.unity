@@ -175,12 +175,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 471857462204998834, guid: 0773e860044c0114f90a79421d3baa3c, type: 3}
-      propertyPath: nextLevelName
-      value: mainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 471857462204998834, guid: 0773e860044c0114f90a79421d3baa3c, type: 3}
       propertyPath: nextLevelIndex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 471857462204998835, guid: 0773e860044c0114f90a79421d3baa3c, type: 3}
       propertyPath: m_Name
@@ -218,10 +214,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuPrefabs: {fileID: 4848312121876687406, guid: e3089609b3edadf42b733f3c2b74b4e9, type: 3}
-  settingsMenu: {fileID: 5401941792545477818, guid: 4ae64fcc338668b44a8b5727e15418ad, type: 3}
+  settingsMenu: {fileID: 8326743163273559842, guid: 4ae64fcc338668b44a8b5727e15418ad, type: 3}
   creditsMenu: {fileID: -8620086569546502513, guid: b7a3119047b8e674ca3c4aaf5c6b7949, type: 3}
-  gameMenuPrefabs: {fileID: 232582694, guid: f62c0b4bb7922574785b26dfc7e4b632, type: 3}
-  pauseMenuPrefabs: {fileID: 8296944849102395074, guid: 4a83fbd273e8b3543979bc2ac0bb8bf2, type: 3}
+  gameMenuPrefab: {fileID: 232582694, guid: f62c0b4bb7922574785b26dfc7e4b632, type: 3}
+  pauseGameMenu: {fileID: 92436297954156007, guid: 4a83fbd273e8b3543979bc2ac0bb8bf2, type: 3}
   menuParentObj: {fileID: 0}
 --- !u!4 &978286211
 Transform:

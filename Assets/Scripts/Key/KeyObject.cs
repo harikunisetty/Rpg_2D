@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class KeyObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject levelObject;
 
-    // Update is called once per frame
-    void Update()
+    public void Start()
     {
-        
+       
     }
+   
 }
