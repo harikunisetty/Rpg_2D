@@ -49,13 +49,11 @@ public class GameManager : MonoBehaviour
     void LevelEnded()
     {
         if (playerController != null)
-        {
-       
-            playerController.enabled = false;
+        {       
+            //playerController.enabled = false;
 
-            player.GetComponent<Rigidbody2D>().MovePosition(Vector3.zero);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-                                                                                                                                                                                                                                                                               
-            LoadNextLevel();
+            //player.GetComponent<Rigidbody2D>().MovePosition(Vector3.zero);                                                                  
+            //LoadNextLevel();
         }
     }
     public void ReloadLevel()
