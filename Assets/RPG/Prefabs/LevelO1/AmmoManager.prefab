@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1677a08f7e69e04cb784dd68145f42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numOfPools: 10
+  numOfPools: 100
   ammoPrefab: {fileID: 8734042746582792709, guid: 489fdb5fea1296b4ea566ab55ed1d453, type: 3}
   ammoArray: []

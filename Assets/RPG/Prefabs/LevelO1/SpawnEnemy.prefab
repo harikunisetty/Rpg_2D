@@ -47,4 +47,4 @@ MonoBehaviour:
   newEnemy: {fileID: 0}
   rend: {fileID: 0}
   timeToStart: 2
-  timeBetweenEnemys: 10
+  timeBetweenEnemys: 5

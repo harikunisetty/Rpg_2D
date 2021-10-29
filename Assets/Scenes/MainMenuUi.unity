@@ -136,15 +136,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 471857462204998833, guid: 0773e860044c0114f90a79421d3baa3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.8400736
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 471857462204998833, guid: 0773e860044c0114f90a79421d3baa3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.226434
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 471857462204998833, guid: 0773e860044c0114f90a79421d3baa3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.974098
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 471857462204998833, guid: 0773e860044c0114f90a79421d3baa3c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -218,6 +218,7 @@ MonoBehaviour:
   creditsMenu: {fileID: -8620086569546502513, guid: b7a3119047b8e674ca3c4aaf5c6b7949, type: 3}
   gameMenuPrefab: {fileID: 232582694, guid: f62c0b4bb7922574785b26dfc7e4b632, type: 3}
   pauseGameMenu: {fileID: 92436297954156007, guid: 4a83fbd273e8b3543979bc2ac0bb8bf2, type: 3}
+  gameOver: {fileID: 0}
   menuParentObj: {fileID: 0}
 --- !u!4 &978286211
 Transform:

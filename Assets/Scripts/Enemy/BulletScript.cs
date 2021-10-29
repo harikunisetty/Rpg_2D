@@ -41,7 +41,7 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-           // GameControl.health -= 1;
+            GameControl.health -= 1;
         }
     }
 }

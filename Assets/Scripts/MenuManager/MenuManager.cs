@@ -48,7 +48,6 @@ public class MenuManager : MonoBehaviour
 
             menuParentObj = menuObj.transform;
         }
-
         DontDestroyOnLoad(menuParentObj);
 
         Menu[] menusPrefabs = { mainMenuPrefabs, settingsMenu, creditsMenu, gameMenuPrefab, pauseGameMenu,gameOver};
@@ -68,7 +67,6 @@ public class MenuManager : MonoBehaviour
                     OpenMenu(menuInstance);
                 }
             }
-
         }
     }
     public void OpenMenu(Menu menuInstance)

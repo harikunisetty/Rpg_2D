@@ -199,8 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c4bcee9bffba34a84f604c58cccffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
-  maxVelocity: 4
+  speed: 10
   facingRight: 0
   rigidbody2D: {fileID: 0}
   anim: {fileID: 0}
@@ -274,7 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608f7dce8ad6dfd40a1e6f93b93c2c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackIntervals: 0.5
-  speed: 500
+  speed: 25
   fireTrans: {fileID: 6592823089887044440}
-  Ammo: {fileID: 8734042746582792709, guid: 489fdb5fea1296b4ea566ab55ed1d453, type: 3}
+  facingRight: 0
