@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu :Menu<PauseMenu>
+public class PauseMenu : Menu<PauseMenu>
 {
     [SerializeField] int mainMenuBuildIndex = 0;
     public void Resume()

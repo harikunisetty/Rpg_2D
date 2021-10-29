@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class GameMenu :Menu<GameMenu>
 {
-    [Header("Score")]
-    [SerializeField] Text scoreText;
-
     public void PauseGamemenu()
     {
         Time.timeScale = 0f;

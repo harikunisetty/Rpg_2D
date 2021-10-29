@@ -6,9 +6,10 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] MainMenu mainMenuPrefabs;
     [SerializeField] SettingsMenu settingsMenu;
-    [SerializeField] CreditsMenu creditsMenu;
-    [SerializeField] GameMenu gameMenuPrefabs;
-    [SerializeField] PauseMenu pauseMenuPrefabs;
+    [SerializeField] Creditsmenu creditsMenu;
+    [SerializeField] GameMenu gameMenuPrefab;
+    [SerializeField] PauseMenu pauseGameMenu;
+    [SerializeField] GameOver gameOver;
     [SerializeField] Transform menuParentObj;
 
     [Header("Stack")]
@@ -17,7 +18,6 @@ public class MenuManager : MonoBehaviour
 
     [Header("MenuManager")]
     private static MenuManager instance;
-    
 
     public static MenuManager Instance { get => instance; }
 
@@ -42,24 +42,26 @@ public class MenuManager : MonoBehaviour
 
     void CreateMenu()
     {
-        if (menuParentObj != null)
+        if (menuParentObj == null)
         {
-            return;
+            GameObject menuObj = new GameObject("Menu");
+
+            menuParentObj = menuObj.transform;
         }
 
-        GameObject menuObj = new GameObject("Menu");
-        menuParentObj = menuObj.transform;
+        DontDestroyOnLoad(menuParentObj);
 
-        Menu[] menus = { mainMenuPrefabs, settingsMenu, creditsMenu,gameMenuPrefabs,pauseMenuPrefabs};
-        foreach (Menu menuPrefabs in menus)
+        Menu[] menusPrefabs = { mainMenuPrefabs, settingsMenu, creditsMenu, gameMenuPrefab, pauseGameMenu,gameOver};
+
+        foreach (Menu menuPrefab in menusPrefabs)
         {
-            if (menuPrefabs != null)
+            if (menuPrefab != null)
             {
-                Menu menuInstance = Instantiate(menuPrefabs, menuParentObj);
+                Menu menuInstance = Instantiate(menuPrefab, menuParentObj);
 
-                if (menuPrefabs != mainMenuPrefabs)
+                if (menuPrefab != mainMenuPrefabs)
                 {
-                    menuPrefabs.gameObject.SetActive(false);
+                    menuInstance.gameObject.SetActive(false);
                 }
                 else
                 {

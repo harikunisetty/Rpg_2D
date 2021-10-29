@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AmmoPostion : MonoBehaviour
 {
-
     [Header("Fire")]
     [SerializeField] float speed = 20f;
     [SerializeField] Transform fireTrans;

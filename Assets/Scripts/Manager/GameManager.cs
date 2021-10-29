@@ -39,8 +39,10 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "MainUI")
+        if (SceneManager.GetActiveScene().name == "MainMenuUi")
+        {
             return;
+        }
         if (levelObject != null && levelObject.IsObjectiveCompleted)
         {
             LevelEnded();

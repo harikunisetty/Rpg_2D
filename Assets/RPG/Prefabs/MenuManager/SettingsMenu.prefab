@@ -705,7 +705,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5401941792545477818}
+      - m_Target: {fileID: 8326743163273559842}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: BackButton
         m_Mode: 1
@@ -729,14 +729,14 @@ GameObject:
   - component: {fileID: 4121737603311289506}
   - component: {fileID: 4121737603311289517}
   - component: {fileID: 4121737603311289516}
-  - component: {fileID: 5401941792545477818}
+  - component: {fileID: 8326743163273559842}
   m_Layer: 5
   m_Name: SETTINGSMENU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4121737603311289507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5401941792545477818
+--- !u!114 &8326743163273559842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4121737603311289519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68dae88fe74c7d24d837dffbdf9428ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e2423fc6a8a21244a812dfaac9c883b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 5892000891032717772}
@@ -955,7 +955,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5401941792545477818}
+      - m_Target: {fileID: 8326743163273559842}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: Vibrations
         m_Mode: 1
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5401941792545477818}
+      - m_Target: {fileID: 8326743163273559842}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: volumeController
         m_Mode: 4
@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5401941792545477818}
+      - m_Target: {fileID: 8326743163273559842}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: volumeController
         m_Mode: 0

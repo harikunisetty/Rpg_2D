@@ -27,7 +27,6 @@ public class SettingsMenu : Menu<SettingsMenu>
 
         LoadData();
         Debug.Log(Application.persistentDataPath);
-
     }
     public void volumeController(float Volume)
     {
@@ -37,6 +36,7 @@ public class SettingsMenu : Menu<SettingsMenu>
             return;
 
         dataManager.Volume = Volume;
+        Debug.Log("volume" + Volume);
     }
     public void Vibrations()
     {
@@ -46,14 +46,10 @@ public class SettingsMenu : Menu<SettingsMenu>
         vibrations = !vibrations;
         dataManager.Vibrations = vibrations;
 
-
         if (vibrations)
             vibrationsText.text = "ON";
         else
             vibrationsText.text = "OFF";
-
-
-
     }
     public override void BackButton()
     {

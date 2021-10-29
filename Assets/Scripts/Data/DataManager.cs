@@ -32,7 +32,7 @@ public class DataManager : MonoBehaviour
     public void Load()
     {
         saveJson.LoadDataToFile(saveData);
-        /* Debug.Log("DataManager" + saveJson.LoadDataToFile(saveData));*/
+        Debug.Log("DataManager" + saveJson.LoadDataToFile(saveData));
     }
     public void Delete()
     {
