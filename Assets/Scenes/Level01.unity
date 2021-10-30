@@ -196,7 +196,7 @@ MonoBehaviour:
   levelObject: {fileID: 831005250}
   keyObject: {fileID: 1401804145}
   timer: 0
-  startTime: 4
+  startTime: 20
   stopTimer: 0
 --- !u!61 &452479822
 BoxCollider2D:
@@ -205,7 +205,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452479819}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -490,6 +490,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 267428246920359707, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
   m_PrefabInstance: {fileID: 3618489404151162788}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1723355237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3372837522037743357, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
+  m_PrefabInstance: {fileID: 3618489404151162788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723355236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bcaecd61c7807448a8ac6e340735a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1781333602 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 655621364202323883, guid: 7dbf4aff8a81c444084e9fede046206d, type: 3}
@@ -1273,10 +1284,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 267428246920359707, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 418674709566667216, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1044275289}
+      objectReference: {fileID: 1723355237}
+    - target: {fileID: 418674709566667216, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 918080867404911872, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1723355237}
+    - target: {fileID: 918080867404911872, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 5136534757011641078, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
       propertyPath: m_Pivot.x
       value: 0

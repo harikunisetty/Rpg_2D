@@ -160,7 +160,6 @@ MonoBehaviour:
   - {fileID: 4580639603624587230, guid: 8a406e90f028e544ea5d1609a4ae5b0c, type: 3}
   - {fileID: 8914404629667316053, guid: 7724ba29a04471347917e103b07f1a8d, type: 3}
   - {fileID: 7367532736690198948, guid: 1c004c6b000fce74aa6142e822486836, type: 3}
-  - {fileID: 0}
   timer: 0
   startTime: 2
   restTimer: 10
