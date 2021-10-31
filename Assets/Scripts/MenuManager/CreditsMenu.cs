@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Creditsmenu : Menu<Creditsmenu>
+public class CreditsMenu : Menu<CreditsMenu>
 {
     public override void BackButton()
     {

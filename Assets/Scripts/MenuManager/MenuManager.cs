@@ -6,7 +6,7 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] MainMenu mainMenuPrefabs;
     [SerializeField] SettingsMenu settingsMenu;
-    [SerializeField] Creditsmenu creditsMenu;
+    [SerializeField] CreditsMenu creditsMenu;
     [SerializeField] GameMenu gameMenuPrefab;
     [SerializeField] PauseMenu pauseGameMenu;
     [SerializeField] GameOver gameOver;

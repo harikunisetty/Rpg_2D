@@ -215,10 +215,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPrefabs: {fileID: 4848312121876687406, guid: e3089609b3edadf42b733f3c2b74b4e9, type: 3}
   settingsMenu: {fileID: 8326743163273559842, guid: 4ae64fcc338668b44a8b5727e15418ad, type: 3}
-  creditsMenu: {fileID: -8620086569546502513, guid: b7a3119047b8e674ca3c4aaf5c6b7949, type: 3}
+  creditsMenu: {fileID: 7907631425968247377, guid: b7a3119047b8e674ca3c4aaf5c6b7949, type: 3}
   gameMenuPrefab: {fileID: 232582694, guid: f62c0b4bb7922574785b26dfc7e4b632, type: 3}
   pauseGameMenu: {fileID: 92436297954156007, guid: 4a83fbd273e8b3543979bc2ac0bb8bf2, type: 3}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 3372837522037743357, guid: 26517e53c5c72914c87a19178f04a54a, type: 3}
   menuParentObj: {fileID: 0}
 --- !u!4 &978286211
 Transform:
@@ -298,7 +298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441483482
 GameObject:
@@ -336,7 +336,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -393,6 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063578950}
   - component: {fileID: 2063578949}
+  - component: {fileID: 2063578951}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -424,5 +425,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2063578951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063578948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a6fc8f18d8b704880efebe5b8a5ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

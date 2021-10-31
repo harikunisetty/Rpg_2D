@@ -6,17 +6,13 @@ using UnityEngine.UI;
 public class SettingsMenu : Menu<SettingsMenu>
 {
     [Header("Volume")]
-
     [SerializeField] Slider volumeSlider;
 
     [Header("Vibrations")]
-
     [SerializeField] bool vibrations;
-
     [SerializeField] Text vibrationsText;
 
     [Header("Data")]
-
     [SerializeField] DataManager dataManager;
 
     protected override void Awake()
@@ -26,9 +22,9 @@ public class SettingsMenu : Menu<SettingsMenu>
         dataManager = Object.FindObjectOfType<DataManager>();
 
         LoadData();
-        Debug.Log(Application.persistentDataPath);
+        //Debug.Log(Application.persistentDataPath);
     }
-    public void volumeController(float Volume)
+    public void VolumeController(float Volume)
     {
         //PlayerPrefs.SetFloat("Volume", VolumeValue);
 
@@ -36,7 +32,6 @@ public class SettingsMenu : Menu<SettingsMenu>
             return;
 
         dataManager.Volume = Volume;
-        Debug.Log("volume" + Volume);
     }
     public void Vibrations()
     {
@@ -64,11 +59,11 @@ public class SettingsMenu : Menu<SettingsMenu>
             return;
 
         dataManager.Load();
+
         volumeSlider.value = dataManager.Volume;
         if (dataManager.Vibrations)
             vibrationsText.text = "ON";
         else
             vibrationsText.text = "OFF";
-        /*vibrationsText.text = dataManager.Vibrations.ToString();*/
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    // Convert to Singleton
+
     public SaveData saveData;
     public Savejson saveJson;
     public float Volume
@@ -27,12 +29,11 @@ public class DataManager : MonoBehaviour
     public void Save()
     {
         saveJson.SaveDataToFile(saveData);
-        Debug.Log("DataManager");
     }
     public void Load()
     {
         saveJson.LoadDataToFile(saveData);
-        Debug.Log("DataManager" + saveJson.LoadDataToFile(saveData));
+        //Debug.Log("DataManager" + saveJson.LoadDataToFile(saveData));
     }
     public void Delete()
     {

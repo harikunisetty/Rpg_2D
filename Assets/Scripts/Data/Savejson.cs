@@ -37,7 +37,7 @@ public class Savejson
             using (StreamReader reader = new StreamReader(loadFile))
             {
                 string json = reader.ReadToEnd();
-                JsonUtility.FromJsonOverwrite(json, data);
+                //JsonUtility.FromJsonOverwrite(json, data);
 
                 if (CheckData(json))
                     JsonUtility.FromJsonOverwrite(json, data);
@@ -65,6 +65,7 @@ public class Savejson
     {
         File.Delete(GetFileName());
     }
+
     #region Cryptography
     public string GetHexStringFromHash(byte[] hash)
     {
