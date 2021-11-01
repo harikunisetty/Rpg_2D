@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c716d9e33a05446afc62001e597b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelIndex: 0
+  nextLevelIndex: 2
   nextLevelName: mainMenu
   levelObject: {fileID: 0}
   playerController: {fileID: 0}

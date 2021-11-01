@@ -15,8 +15,6 @@ public class LevelChangerObject : MonoBehaviour
     {
         isObjectiveCompleted = false;
     }
-
-    // Update is called once per frame
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
